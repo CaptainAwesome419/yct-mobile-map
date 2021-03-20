@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 
 const PlaceScreen = () => {
     return (
-        <View>
+        <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
             <Text>Place Component</Text>
         </View>
     )

@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text, SafeAreaView, Image, Dimensions, ImageBackground, Button, StatusBar, StyleSheet } from 'react-native';
-
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const dimScreen = Dimensions.get("window");
 
-function SplashScreen({ navigation }) {
+const SplashScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={splashStyle.container}>
             <ImageBackground
@@ -17,8 +16,8 @@ function SplashScreen({ navigation }) {
                 <Image
                     source={require('../images/logoyct.png')}
                     style={splashStyle.logo}
-                >
-                </Image>
+                />
+
                 <View style={splashStyle.splashBottomDiv}>
                     <View style={splashStyle.bottomDivTextDiv}>
                         <Text style={splashStyle.bottomDivText}>
@@ -26,7 +25,7 @@ function SplashScreen({ navigation }) {
                         </Text>
                     </View>
                     <View style={splashStyle.bottomDivButtonDiv} >
-                        <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+                        <TouchableOpacity onPress={() => navigation.navigate('MapScreen')}>
                             <Text style={splashStyle.bottomDivButtonText} >Go To Map</Text>
                         </TouchableOpacity>
                     </View>
